@@ -1,0 +1,97 @@
+// ==========================================
+// BOTONES
+// ==========================================
+@use "sass:color";
+@use "../utilities/variables" as vars;
+@use "../utilities/mixins" as mix;
+
+// Estilo base para botones
+%boton-base {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 24px;
+    border: 2px solid transparent;
+    border-radius: vars.$radio-borde;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: vars.$transicion-normal;
+
+    &:hover {
+        transform: translateY(-2px);
+    }
+}
+
+// Botón principal
+.btn-inmobiliaria {
+    @extend %boton-base;
+
+    background-color: vars.$color-primario;
+    border-color: vars.$color-primario;
+    color: vars.$color-blanco;
+
+    &:hover {
+        background-color: vars.$color-primario-hover;
+        border-color: vars.$color-primario-hover;
+        color: vars.$color-blanco;
+    }
+}
+
+// Botón secundario
+.btn-secundario {
+    @extend %boton-base;
+
+    background-color: vars.$color-secundario;
+    border-color: vars.$color-secundario;
+    color: vars.$color-blanco;
+
+    &:hover {
+        background-color: vars.$color-secundario-hover;
+        border-color: vars.$color-secundario-hover;
+        color: vars.$color-blanco;
+    }
+}
+
+// Botón contorno
+.btn-outline-inmobiliaria {
+    @extend %boton-base;
+
+    background-color: transparent;
+    border-color: vars.$color-primario;
+    color: vars.$color-primario;
+
+    &:hover {
+        background-color: vars.$color-primario;
+        color: vars.$color-blanco;
+    }
+}
+
+// Botón WhatsApp
+.btn-whatsapp {
+    @extend %boton-base;
+
+    margin-top: vars.$espaciado-pequeno;
+    background-color: vars.$color-exito;
+    border-color: vars.$color-exito;
+    color: vars.$color-blanco;
+
+    &:hover {
+        background-color: color.adjust(vars.$color-exito, $lightness: -8%);
+        border-color: color.adjust(vars.$color-exito, $lightness: -8%); 
+        color: vars.$color-blanco;
+    }
+}
+
+// Responsive
+@include mix.tablet {
+
+    .btn-inmobiliaria,
+    .btn-secundario,
+    .btn-outline-inmobiliaria,
+    .btn-whatsapp {
+        padding: 13px 28px;
+    }
+}

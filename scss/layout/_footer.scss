@@ -1,0 +1,127 @@
+// ==========================================
+// FOOTER
+// ==========================================
+
+@use "../utilities/variables" as vars;
+@use "../utilities/mixins" as mix;
+
+.footer-inmobiliaria {
+    padding: vars.$espaciado-xl 0 vars.$espaciado-medio;
+    background-color: vars.$color-primario;
+    color: vars.$color-blanco;
+
+    .footer-logo {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: vars.$espaciado-medio;
+        color: vars.$color-blanco;
+        font-size: 1.6rem;
+        font-weight: 700;
+        transition: vars.$transicion-normal;
+
+        &:hover {
+            color: vars.$color-secundario;
+        }
+
+        i {
+            font-size: 1.4rem;
+        }
+    }
+
+    p {
+        color: rgba(255, 255, 255, 0.75);
+    }
+
+    h3 {
+        margin-bottom: vars.$espaciado-medio;
+        color: vars.$color-blanco;
+        font-size: 1rem;
+        font-weight: 600;
+    }
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    li {
+        color: rgba(255, 255, 255, 0.75);
+    }
+
+    a {
+        transition: vars.$transicion-normal;
+
+        &:hover {
+            color: vars.$color-secundario;
+        }
+    }
+
+    .footer-contacto {
+
+        li {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+
+            i {
+                margin-top: 4px;
+                color: vars.$color-secundario;
+            }
+        }
+    }
+
+    .redes-sociales {
+        @include mix.flex(row, flex-start, center, 10px);
+
+        a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 42px;
+            height: 42px;
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            border-radius: vars.$radio-redondo;
+            color: vars.$color-blanco;
+            transition: vars.$transicion-normal;
+
+            &:hover {
+                background-color: vars.$color-secundario;
+                border-color: vars.$color-secundario;
+                color: vars.$color-primario;
+                transform: translateY(-3px);
+            }
+        }
+    }
+
+    .footer-bottom {
+        margin-top: vars.$espaciado-grande;
+        padding-top: vars.$espaciado-medio;
+        border-top: 1px solid rgba(255, 255, 255, 0.15);
+        text-align: center;
+
+        p {
+            margin-bottom: 0;
+            font-size: vars.$texto-pequeno;
+        }
+    }
+}
+
+// ==========================================
+// RESPONSIVE
+// ==========================================
+
+@include mix.tablet {
+
+    .footer-inmobiliaria {
+        padding-top: 70px;
+    }
+}
+
+@include mix.desktop {
+
+    .footer-inmobiliaria {
+        padding-top: 80px;
+    }
+}

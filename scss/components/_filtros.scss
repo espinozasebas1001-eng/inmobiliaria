@@ -1,0 +1,123 @@
+// ==========================================
+// FILTROS DE PROPIEDADES
+// ==========================================
+
+@use "../utilities/variables" as vars;
+@use "../utilities/mixins" as mix;
+
+.filtros-section {
+    padding: vars.$espaciado-grande 0;
+    background-color: vars.$color-fondo;
+}
+
+.filtros-propiedades {
+    padding: vars.$espaciado-grande;
+    background-color: vars.$color-blanco;
+    border: 1px solid vars.$color-borde;
+    border-radius: vars.$radio-borde;
+    box-shadow: vars.$sombra-suave;
+}
+
+.filtros-titulo {
+    display: flex;
+    align-items: center;
+    gap: vars.$espaciado-medio;
+    margin-bottom: vars.$espaciado-medio;
+
+    > i {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        background-color: vars.$color-fondo;
+        color: vars.$color-primario;
+        font-size: 1.3rem;
+    }
+
+    h2 {
+        margin-bottom: 4px;
+        color: vars.$color-texto;
+        font-size: vars.$texto-grande;
+    }
+
+    p {
+        margin-bottom: 0;
+        color: vars.$color-texto-claro;
+        font-size: vars.$texto-pequeno;
+    }
+}
+
+.form-filtros {
+    display: grid;
+    gap: vars.$espaciado-medio;
+}
+
+.campo-filtro {
+    display: flex;
+    flex-direction: column;
+
+    label {
+        margin-bottom: 6px;
+        color: vars.$color-texto;
+        font-size: vars.$texto-pequeno;
+        font-weight: 600;
+    }
+
+    input,
+    select {
+        width: 100%;
+        min-height: 46px;
+        padding: 10px 14px;
+        border: 1px solid vars.$color-borde;
+        border-radius: vars.$radio-pequeno;
+        background-color: vars.$color-blanco;
+        color: vars.$color-texto;
+        font-family: vars.$fuente-principal;
+        outline: none;
+        transition: vars.$transicion-normal;
+
+        &:focus {
+            border-color: vars.$color-primario;
+            box-shadow: 0 0 0 3px rgba(35, 79, 62, 0.1);
+        }
+    }
+}
+
+.btn-buscar {
+    align-self: end;
+    min-height: 46px;
+}
+
+// ==========================================
+// RESPONSIVE
+// ==========================================
+
+@include mix.tablet {
+
+    .form-filtros {
+        grid-template-columns: repeat(2, 1fr);
+        align-items: end;
+    }
+
+    .btn-buscar {
+        grid-column: span 2;
+    }
+}
+
+@include mix.desktop {
+
+    .filtros-propiedades {
+        padding: vars.$espaciado-grande;
+    }
+
+    .form-filtros {
+        grid-template-columns: repeat(4, 1fr);
+        align-items: end;
+    }
+
+    .btn-buscar {
+        grid-column: auto;
+    }
+}

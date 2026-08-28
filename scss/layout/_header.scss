@@ -1,0 +1,124 @@
+// ==========================================
+// HEADER
+// ==========================================
+
+@use "../utilities/variables" as vars;
+@use "../utilities/mixins" as mix;
+
+header {
+    background-color: vars.$color-blanco;
+}
+
+.navbar-inmobiliaria {
+    min-height: 80px;
+    padding: vars.$espaciado-medio 0;
+    background-color: vars.$color-blanco;
+    box-shadow: vars.$sombra-suave;
+
+    .container {
+        @include mix.flex(row, space-between, center, 20px);
+    }
+
+    .navbar-brand {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        color: vars.$color-primario;
+        font-size: 1.6rem;
+        font-weight: 700;
+        transition: vars.$transicion-normal;
+
+        &:hover {
+            color: vars.$color-primario-hover;
+            transform: translateY(-1px);
+        }
+
+        .logo-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 42px;
+            height: 42px;
+            border-radius: vars.$radio-redondo;
+            background-color: vars.$color-primario;
+            color: vars.$color-blanco;
+            font-size: 1.2rem;
+        }
+    }
+
+    .navbar-toggler {
+        border: 1px solid vars.$color-primario;
+        padding: 8px 10px;
+
+        &:focus {
+            box-shadow: 0 0 0 3px rgba(35, 79, 62, 0.15);
+        }
+    }
+
+    .navbar-toggler-icon {
+        filter: none;
+    }
+
+    .navbar-collapse {
+        padding-top: vars.$espaciado-medio;
+    }
+
+    .navbar-nav {
+        gap: 5px;
+    }
+
+    .nav-link {
+        padding: 10px 14px !important;
+        color: vars.$color-texto;
+        font-weight: 500;
+        border-radius: vars.$radio-pequeno;
+        transition: vars.$transicion-normal;
+
+        &:hover {
+            color: vars.$color-primario;
+            background-color: rgba(35, 79, 62, 0.06);
+        }
+
+        &.active {
+            color: vars.$color-primario;
+            font-weight: 700;
+        }
+    }
+
+    .btn-inmobiliaria {
+        margin-top: vars.$espaciado-pequeno;
+    }
+}
+
+// ==========================================
+// TABLET
+// ==========================================
+
+@include mix.tablet {
+
+    .navbar-inmobiliaria {
+
+        .navbar-collapse {
+            padding-top: 0;
+        }
+
+        .btn-inmobiliaria {
+            margin-top: 0;
+        }
+    }
+}
+
+// ==========================================
+// DESKTOP
+// ==========================================
+
+@include mix.desktop {
+
+    .navbar-inmobiliaria {
+        min-height: 90px;
+
+        .navbar-nav {
+            gap: 8px;
+        }
+    }
+}

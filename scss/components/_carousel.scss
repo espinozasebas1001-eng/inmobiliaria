@@ -1,0 +1,200 @@
+// ==========================================
+// CARRUSEL / GALERÍA
+// ==========================================
+
+@use "../utilities/variables" as vars;
+@use "../utilities/mixins" as mix;
+
+.carousel-inmobiliaria {
+    overflow: hidden;
+    border-radius: vars.$radio-borde;
+    box-shadow: vars.$sombra-media;
+
+    .carousel-item {
+        position: relative;
+
+        img {
+            @include mix.imagen-responsive(450px, 0);
+        }
+    }
+
+    .carousel-caption {
+        right: 10%;
+        bottom: 30px;
+        left: 10%;
+        padding: vars.$espaciado-medio;
+        background-color: rgba(35, 79, 62, 0.85);
+        border-radius: vars.$radio-borde;
+
+        h2,
+        h3,
+        p {
+            color: vars.$color-blanco;
+        }
+
+        h2,
+        h3 {
+            margin-bottom: vars.$espaciado-pequeno;
+        }
+
+        p {
+            margin-bottom: 0;
+        }
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+        width: 50px;
+        height: 50px;
+        top: 50%;
+        margin: 0 vars.$espaciado-medio;
+        transform: translateY(-50%);
+        border-radius: vars.$radio-redondo;
+        background-color: vars.$color-primario;
+        opacity: 0.9;
+        transition: vars.$transicion-normal;
+
+        &:hover {
+            background-color: vars.$color-secundario;
+            opacity: 1;
+        }
+    }
+
+    .carousel-indicators {
+        margin-bottom: vars.$espaciado-medio;
+
+        button {
+            width: 10px;
+            height: 10px;
+            border: 0;
+            border-radius: vars.$radio-redondo;
+            background-color: vars.$color-blanco;
+        }
+    }
+}
+
+// ==========================================
+// GALERÍA DE PROPIEDAD
+// ==========================================
+
+.galeria-propiedad {
+    overflow: hidden;
+    border-radius: vars.$radio-borde;
+
+    .galeria-principal {
+        position: relative;
+
+        img {
+            @include mix.imagen-responsive(400px, 0);
+        }
+
+        .badge-propiedad {
+            position: absolute;
+            top: vars.$espaciado-medio;
+            left: vars.$espaciado-medio;
+            padding: 7px 14px;
+            background-color: vars.$color-secundario;
+            border-radius: vars.$radio-pequeno;
+            color: vars.$color-blanco;
+            font-size: vars.$texto-pequeno;
+            font-weight: 700;
+        }
+    }
+
+    .galeria-miniaturas {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: vars.$espaciado-pequeno;
+        margin-top: vars.$espaciado-pequeno;
+
+        .miniatura {
+            overflow: hidden;
+            border: 2px solid transparent;
+            border-radius: vars.$radio-pequeno;
+            cursor: pointer;
+            transition: vars.$transicion-normal;
+
+            img {
+                width: 100%;
+                height: 90px;
+                object-fit: cover;
+            }
+
+            &:hover,
+            &.activa {
+                border-color: vars.$color-secundario;
+                transform: translateY(-2px);
+            }
+        }
+    }
+}
+
+// ==========================================
+// RESPONSIVE
+// ==========================================
+
+@include mix.tablet {
+
+    .carousel-inmobiliaria {
+
+        .carousel-item {
+
+            img {
+                height: 550px;
+            }
+        }
+    }
+
+    .galeria-propiedad {
+
+        .galeria-principal {
+
+            img {
+                height: 500px;
+            }
+        }
+
+        .galeria-miniaturas {
+
+            .miniatura {
+
+                img {
+                    height: 110px;
+                }
+            }
+        }
+    }
+}
+
+@include mix.desktop {
+
+    .carousel-inmobiliaria {
+
+        .carousel-item {
+
+            img {
+                height: 600px;
+            }
+        }
+    }
+
+    .galeria-propiedad {
+
+        .galeria-principal {
+
+            img {
+                height: 600px;
+            }
+        }
+
+        .galeria-miniaturas {
+
+            .miniatura {
+
+                img {
+                    height: 130px;
+                }
+            }
+        }
+    }
+}

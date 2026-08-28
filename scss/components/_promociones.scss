@@ -1,0 +1,150 @@
+// ==========================================
+// PROMOCIONES / DESTACADOS
+// ==========================================
+
+@use "../utilities/variables" as vars;
+@use "../utilities/mixins" as mix;
+
+.promociones-section {
+    background-color: vars.$color-fondo;
+
+    .titulo-seccion {
+        margin-bottom: vars.$espaciado-grande;
+    }
+}
+
+.promo-card {
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    min-height: 280px;
+    padding: vars.$espaciado-grande;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background-color: vars.$color-primario;
+    border-radius: vars.$radio-borde;
+    color: vars.$color-blanco;
+    box-shadow: vars.$sombra-suave;
+    transition: vars.$transicion-normal;
+
+    &:hover {
+        transform: translateY(-6px);
+        box-shadow: vars.$sombra-media;
+
+        .promo-icono {
+            transform: scale(1.1) rotate(5deg);
+        }
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: -60px;
+        right: -60px;
+        width: 180px;
+        height: 180px;
+        border-radius: vars.$radio-redondo;
+        background-color: rgba(201, 162, 39, 0.18);
+    }
+
+    .promo-icono {
+        position: relative;
+        z-index: 1;
+        @include mix.flex(row, center, center, 0);
+        width: 60px;
+        height: 60px;
+        margin-bottom: vars.$espaciado-medio;
+        border-radius: vars.$radio-redondo;
+        background-color: vars.$color-secundario;
+        color: vars.$color-blanco;
+        font-size: 1.5rem;
+        transition: vars.$transicion-normal;
+    }
+
+    .promo-contenido {
+        position: relative;
+        z-index: 1;
+
+        .promo-etiqueta {
+            display: inline-block;
+            margin-bottom: vars.$espaciado-pequeno;
+            color: vars.$color-secundario;
+            font-size: vars.$texto-pequeno;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        h3 {
+            margin-bottom: vars.$espaciado-pequeno;
+            color: vars.$color-blanco;
+        }
+
+        p {
+            margin-bottom: 0;
+            color: rgba(255, 255, 255, 0.8);
+        }
+    }
+}
+
+// ==========================================
+// BANNER PROMOCIONAL
+// ==========================================
+
+.promo-banner {
+    position: relative;
+    overflow: hidden;
+    padding: vars.$espaciado-grande;
+    background-color: vars.$color-secundario;
+    border-radius: vars.$radio-borde;
+
+    &::after {
+        content: "";
+        position: absolute;
+        right: -50px;
+        bottom: -80px;
+        width: 220px;
+        height: 220px;
+        border: 40px solid rgba(255, 255, 255, 0.12);
+        border-radius: vars.$radio-redondo;
+    }
+
+    .promo-banner-contenido {
+        position: relative;
+        z-index: 1;
+
+        h2 {
+            margin-bottom: vars.$espaciado-medio;
+            color: vars.$color-blanco;
+        }
+
+        p {
+            max-width: 700px;
+            color: rgba(255, 255, 255, 0.9);
+        }
+    }
+}
+
+// ==========================================
+// RESPONSIVE
+// ==========================================
+
+@include mix.tablet {
+
+    .promo-card {
+        min-height: 320px;
+        padding: 45px;
+    }
+
+    .promo-banner {
+        padding: 50px;
+    }
+}
+
+@include mix.desktop {
+
+    .promo-card {
+        min-height: 350px;
+    }
+}

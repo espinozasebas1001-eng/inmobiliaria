@@ -1,0 +1,73 @@
+// ==========================================
+// MIXINS
+// ==========================================
+
+// Contenedor responsive
+@mixin contenedor($ancho: 1200px) {
+    width: min(90%, $ancho);
+    margin: 0 auto;
+}
+
+// Flexbox configurable
+@mixin flex($direccion: row, $justify: center, $align: center, $gap: 20px) {
+    display: flex;
+    flex-direction: $direccion;
+    justify-content: $justify;
+    align-items: $align;
+    gap: $gap;
+}
+
+// Imagen responsive
+@mixin imagen-responsive($alto: 300px, $radio: 12px) {
+    width: 100%;
+    height: $alto;
+    object-fit: cover;
+    border-radius: $radio;
+}
+
+// Texto centrado
+@mixin texto-centrado($max-width: 700px) {
+    max-width: $max-width;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+// Media query
+@mixin tablet {
+    @media (min-width: 768px) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: 1024px) {
+        @content;
+    }
+}
+
+// Botón base
+@mixin boton($fondo, $texto) {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 24px;
+    background-color: $fondo;
+    color: $texto;
+    border: 2px solid $fondo;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease;
+
+    &:hover {
+        transform: translateY(-2px);
+    }
+}
+@mixin media-query($breakpoint) {
+    @media (min-width: $breakpoint) {
+        @content;
+    }
+}

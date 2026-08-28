@@ -1,0 +1,607 @@
+// ==========================================
+// ESTILOS GENERALES DE PÁGINAS
+// ==========================================
+
+@use "../utilities/variables" as vars;
+@use "../utilities/mixins" as mix;
+
+// ==========================================
+// ENCABEZADO DE PÁGINA
+// ==========================================
+
+.page-header {
+    padding: 80px 0;
+    background-color: vars.$color-primario;
+
+    h1 {
+        margin-bottom: vars.$espaciado-medio;
+        color: vars.$color-blanco;
+
+        span {
+            color: vars.$color-secundario;
+        }
+    }
+
+    p {
+        max-width: 700px;
+        margin: 0 auto;
+        color: rgba(255, 255, 255, 0.85);
+        font-size: vars.$texto-medio;
+    }
+}
+
+// ==========================================
+// BREADCRUMB
+// ==========================================
+
+.breadcrumb-section {
+    padding: vars.$espaciado-medio 0;
+    background-color: vars.$color-blanco;
+    border-bottom: 1px solid vars.$color-borde;
+
+    .breadcrumb {
+        margin-bottom: 0;
+
+        a {
+            color: vars.$color-primario;
+            transition: vars.$transicion-rapida;
+
+            &:hover {
+                color: vars.$color-secundario;
+            }
+        }
+
+        .active {
+            color: vars.$color-texto-claro;
+        }
+    }
+}
+
+// ==========================================
+// DETALLE DE PROPIEDAD
+// ==========================================
+
+.detalle-propiedad {
+    background-color: vars.$color-fondo;
+
+    .detalle-contenido {
+        margin-top: vars.$espaciado-grande;
+    }
+}
+
+.detalle-info {
+
+    .tipo-propiedad {
+        color: vars.$color-secundario;
+        font-size: vars.$texto-pequeno;
+        font-weight: 700;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+    }
+
+    h1 {
+        margin: 8px 0 vars.$espaciado-medio;
+    }
+
+    .detalle-ubicacion {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+
+        i {
+            color: vars.$color-primario;
+        }
+    }
+
+    .detalle-precio {
+        display: flex;
+        flex-direction: column;
+        margin-top: vars.$espaciado-grande;
+
+        span {
+            color: vars.$color-texto-claro;
+            font-size: vars.$texto-pequeno;
+        }
+
+        strong {
+            color: vars.$color-primario;
+            font-size: 2rem;
+        }
+    }
+}
+
+// ==========================================
+// CARACTERÍSTICAS
+// ==========================================
+
+.caracteristicas-detalle {
+    margin-top: vars.$espaciado-grande;
+
+    h2 {
+        margin-bottom: vars.$espaciado-medio;
+    }
+
+    .grid-caracteristicas {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: vars.$espaciado-medio;
+    }
+
+    .caracteristica {
+        display: flex;
+        align-items: center;
+        gap: vars.$espaciado-medio;
+        padding: vars.$espaciado-medio;
+        background-color: vars.$color-blanco;
+        border: 1px solid vars.$color-borde;
+        border-radius: vars.$radio-borde;
+
+        > i {
+            color: vars.$color-secundario;
+            font-size: 1.5rem;
+        }
+
+        div {
+            display: flex;
+            flex-direction: column;
+
+            span {
+                color: vars.$color-texto-claro;
+                font-size: vars.$texto-pequeno;
+            }
+
+            strong {
+                color: vars.$color-primario;
+            }
+        }
+    }
+}
+
+// ==========================================
+// DESCRIPCIÓN
+// ==========================================
+
+.descripcion-propiedad {
+    margin-top: vars.$espaciado-grande;
+
+    h2 {
+        margin-bottom: vars.$espaciado-medio;
+    }
+
+    p {
+        max-width: 800px;
+    }
+}
+
+// ==========================================
+// CARD SOLICITAR VISITA
+// ==========================================
+
+.card-visita {
+    padding: vars.$espaciado-grande;
+    background-color: vars.$color-blanco;
+    border: 1px solid vars.$color-borde;
+    border-radius: vars.$radio-borde;
+    box-shadow: vars.$sombra-suave;
+
+    .card-visita-icono {
+        @include mix.flex(row, center, center, 0);
+        width: 60px;
+        height: 60px;
+        margin-bottom: vars.$espaciado-medio;
+        border-radius: vars.$radio-redondo;
+        background-color: rgba(201, 162, 39, 0.12);
+        color: vars.$color-secundario;
+        font-size: 1.5rem;
+    }
+
+    h2 {
+        margin-bottom: vars.$espaciado-pequeno;
+        font-size: 1.6rem;
+    }
+}
+
+// ==========================================
+// UBICACIÓN / MAPA
+// ==========================================
+
+.ubicacion-section,
+.mapa-contacto {
+    background-color: vars.$color-blanco;
+}
+
+.mapa-contenedor {
+    overflow: hidden;
+    min-height: 350px;
+    border-radius: vars.$radio-borde;
+    box-shadow: vars.$sombra-suave;
+
+    iframe {
+        display: block;
+        width: 100%;
+        min-height: 350px;
+        border: 0;
+    }
+}
+
+// ==========================================
+// NOSOTROS
+// ==========================================
+
+.sobre-nosotros {
+
+    .nosotros-imagen {
+        overflow: hidden;
+        border-radius: vars.$radio-borde;
+        box-shadow: vars.$sombra-media;
+
+        img {
+            @include mix.imagen-responsive(450px, 0);
+            transition: vars.$transicion-lenta;
+
+            &:hover {
+                transform: scale(1.03);
+            }
+        }
+    }
+
+    .nosotros-contenido {
+
+        h2 {
+            margin-bottom: vars.$espaciado-medio;
+
+            span {
+                color: vars.$color-secundario;
+            }
+        }
+    }
+}
+
+// ==========================================
+// VALORES
+// ==========================================
+
+.valores-section {
+    background-color: vars.$color-blanco;
+}
+
+.valor-card {
+    height: 100%;
+    padding: vars.$espaciado-grande;
+    background-color: vars.$color-fondo;
+    border: 1px solid vars.$color-borde;
+    border-radius: vars.$radio-borde;
+    text-align: center;
+    transition: vars.$transicion-normal;
+
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: vars.$sombra-suave;
+    }
+
+    .valor-icono {
+        @include mix.flex(row, center, center, 0);
+        width: 60px;
+        height: 60px;
+        margin: 0 auto vars.$espaciado-medio;
+        border-radius: vars.$radio-redondo;
+        background-color: vars.$color-primario;
+        color: vars.$color-blanco;
+        font-size: 1.4rem;
+    }
+
+    h3 {
+        margin-bottom: vars.$espaciado-pequeno;
+        color: vars.$color-primario;
+    }
+
+    p {
+        margin-bottom: 0;
+    }
+}
+
+// ==========================================
+// SERVICIOS
+// ==========================================
+
+.servicios-nosotros {
+
+    .servicios-lista {
+        display: flex;
+        flex-direction: column;
+        gap: vars.$espaciado-medio;
+    }
+
+    .servicio {
+        display: flex;
+        align-items: flex-start;
+        gap: vars.$espaciado-medio;
+        padding: vars.$espaciado-medio;
+        background-color: vars.$color-blanco;
+        border: 1px solid vars.$color-borde;
+        border-radius: vars.$radio-borde;
+        transition: vars.$transicion-normal;
+
+        &:hover {
+            transform: translateX(5px);
+            box-shadow: vars.$sombra-suave;
+        }
+
+        .servicio-icono {
+            flex-shrink: 0;
+            @include mix.flex(row, center, center, 0);
+            width: 50px;
+            height: 50px;
+            border-radius: vars.$radio-redondo;
+            background-color: vars.$color-primario;
+            color: vars.$color-blanco;
+        }
+
+        h3 {
+            margin-bottom: 5px;
+        }
+
+        p {
+            margin-bottom: 0;
+        }
+    }
+}
+
+// ==========================================
+// EQUIPO
+// ==========================================
+
+.equipo-section {
+    background-color: vars.$color-blanco;
+}
+
+// ==========================================
+// CONTACTO
+// ==========================================
+
+.contacto-section {
+    background-color: vars.$color-fondo;
+}
+
+.contacto-info {
+
+    h2 {
+        margin-bottom: vars.$espaciado-medio;
+
+        span {
+            color: vars.$color-secundario;
+        }
+    }
+}
+
+.datos-contacto {
+    display: flex;
+    flex-direction: column;
+    gap: vars.$espaciado-medio;
+    margin-top: vars.$espaciado-grande;
+}
+
+.dato-contacto {
+    display: flex;
+    align-items: flex-start;
+    gap: vars.$espaciado-medio;
+
+    .dato-icono {
+        @include mix.flex(row, center, center, 0);
+        flex-shrink: 0;
+        width: 48px;
+        height: 48px;
+        border-radius: vars.$radio-redondo;
+        background-color: vars.$color-primario;
+        color: vars.$color-blanco;
+    }
+
+    div:last-child {
+        display: flex;
+        flex-direction: column;
+
+        span {
+            color: vars.$color-texto-claro;
+            font-size: vars.$texto-pequeno;
+        }
+
+        strong {
+            color: vars.$color-texto;
+        }
+
+        small {
+            color: vars.$color-texto-claro;
+        }
+    }
+}
+
+.contacto-redes {
+    margin-top: vars.$espaciado-grande;
+
+    > span {
+        display: block;
+        margin-bottom: vars.$espaciado-pequeno;
+        font-weight: 600;
+    }
+}
+
+// ==========================================
+// FORMULARIO
+// ==========================================
+
+.formulario-contacto {
+    padding: vars.$espaciado-grande;
+    background-color: vars.$color-blanco;
+    border: 1px solid vars.$color-borde;
+    border-radius: vars.$radio-borde;
+    box-shadow: vars.$sombra-suave;
+
+    .formulario-header {
+        margin-bottom: vars.$espaciado-grande;
+
+        h2 {
+            margin-bottom: vars.$espaciado-pequeno;
+        }
+    }
+
+    label {
+        display: block;
+        margin-bottom: 6px;
+        color: vars.$color-texto;
+        font-weight: 600;
+    }
+
+    input,
+    select,
+    textarea {
+        width: 100%;
+        padding: 12px 14px;
+        border: 1px solid vars.$color-borde;
+        border-radius: vars.$radio-pequeno;
+        background-color: vars.$color-blanco;
+        color: vars.$color-texto;
+        outline: none;
+        transition: vars.$transicion-normal;
+
+        &:focus {
+            border-color: vars.$color-primario;
+            box-shadow: 0 0 0 3px rgba(35, 79, 62, 0.1);
+        }
+    }
+
+    textarea {
+        resize: vertical;
+    }
+
+    .form-check {
+        display: flex;
+        align-items: flex-start;
+        gap: 8px;
+
+        input {
+            width: auto;
+            margin-top: 5px;
+        }
+
+        label {
+            margin-bottom: 0;
+            color: vars.$color-texto-claro;
+            font-size: vars.$texto-pequeno;
+            font-weight: 400;
+        }
+    }
+}
+
+// ==========================================
+// FAQ
+// ==========================================
+
+.faq-section {
+    background-color: vars.$color-blanco;
+}
+
+.accordion-inmobiliaria {
+
+    .accordion-item {
+        margin-bottom: vars.$espaciado-pequeno;
+        border: 1px solid vars.$color-borde;
+        border-radius: vars.$radio-borde !important;
+        overflow: hidden;
+    }
+
+    .accordion-button {
+        color: vars.$color-primario;
+        font-weight: 600;
+
+        &:not(.collapsed) {
+            background-color: rgba(35, 79, 62, 0.06);
+            color: vars.$color-primario;
+            box-shadow: none;
+        }
+
+        &:focus {
+            box-shadow: none;
+        }
+    }
+
+    .accordion-body {
+        color: vars.$color-texto-claro;
+    }
+}
+
+// ==========================================
+// CTA
+// ==========================================
+
+.cta-inmobiliaria {
+    background-color: vars.$color-primario;
+
+    .cta-contenido {
+
+        h2 {
+            margin-bottom: vars.$espaciado-medio;
+            color: vars.$color-blanco;
+
+            &::after {
+                content: "";
+                display: block;
+                width: 60px;
+                height: 3px;
+                margin: vars.$espaciado-medio auto 0;
+                background-color: vars.$color-secundario;
+            }
+        }
+
+        p {
+            color: rgba(255, 255, 255, 0.8);
+        }
+    }
+}
+
+// ==========================================
+// RESPONSIVE
+// ==========================================
+
+@include mix.tablet {
+
+    .page-header {
+        padding: 100px 0;
+    }
+
+    .caracteristicas-detalle {
+
+        .grid-caracteristicas {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+
+    .galeria-propiedad {
+
+        .galeria-miniaturas {
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
+
+    .formulario-contacto {
+        padding: 45px;
+    }
+}
+
+@include mix.desktop {
+
+    .page-header {
+
+        h1 {
+            font-size: 3.5rem;
+        }
+    }
+
+    .card-visita {
+        position: sticky;
+        top: 110px;
+    }
+
+    .formulario-contacto {
+        padding: vars.$espaciado-grande;
+    }
+}

@@ -1,0 +1,58 @@
+// ==========================================
+// NAV
+// ==========================================
+
+@use "../utilities/variables" as vars;
+@use "../utilities/mixins" as mix;
+
+.navbar-inmobiliaria {
+
+    .navbar-toggler {
+        transition: vars.$transicion-normal;
+
+        &:hover {
+            background-color: rgba(35, 79, 62, 0.08);
+        }
+    }
+
+    .navbar-collapse {
+        transition: vars.$transicion-normal;
+    }
+
+    .nav-link {
+
+        &::after {
+            content: "";
+            display: block;
+            width: 0;
+            height: 2px;
+            margin: 4px auto 0;
+            background-color: vars.$color-secundario;
+            transition: vars.$transicion-normal;
+        }
+
+        &:hover::after,
+        &.active::after {
+            width: 70%;
+        }
+    }
+}
+
+// ==========================================
+// TABLET Y DESKTOP
+// ==========================================
+
+@include mix.tablet {
+
+    .navbar-inmobiliaria {
+
+        .navbar-collapse {
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar-nav {
+            align-items: center;
+        }
+    }
+}

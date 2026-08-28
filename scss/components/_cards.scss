@@ -1,0 +1,207 @@
+// ==========================================
+// CARDS
+// ==========================================
+
+@use "../utilities/variables" as vars;
+@use "../utilities/mixins" as mix;
+
+.card-propiedad,
+.card-valor,
+.card-equipo {
+    overflow: hidden;
+    height: 100%;
+    background-color: vars.$color-blanco;
+    border: 1px solid vars.$color-borde;
+    border-radius: vars.$radio-borde;
+    box-shadow: vars.$sombra-suave;
+    transition: vars.$transicion-normal;
+
+    &:hover {
+        transform: translateY(-6px);
+        box-shadow: vars.$sombra-media;
+    }
+}
+
+// ==========================================
+// CARD PROPIEDAD
+// ==========================================
+
+.card-propiedad {
+
+    .propiedad-imagen {
+        position: relative;
+
+        img {
+            @include mix.imagen-responsive(250px, 0);
+        }
+
+        .badge-propiedad {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            padding: 6px 12px;
+            background-color: vars.$color-secundario;
+            border-radius: vars.$radio-pequeno;
+            color: vars.$color-blanco;
+            font-size: vars.$texto-xs;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+    }
+
+    .propiedad-contenido {
+        padding: vars.$espaciado-medio;
+
+        .tipo-propiedad {
+            color: vars.$color-secundario;
+            font-size: vars.$texto-pequeno;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        h3 {
+            margin: 8px 0;
+        }
+
+        .propiedad-ubicacion {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            margin-bottom: vars.$espaciado-medio;
+            color: vars.$color-texto-claro;
+            font-size: vars.$texto-pequeno;
+
+            i {
+                color: vars.$color-primario;
+            }
+        }
+
+        .propiedad-datos {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            padding-top: vars.$espaciado-medio;
+            border-top: 1px solid vars.$color-borde;
+
+            span {
+                display: inline-flex;
+                align-items: center;
+                gap: 5px;
+                color: vars.$color-texto-claro;
+                font-size: vars.$texto-pequeno;
+
+                i {
+                    color: vars.$color-primario;
+                }
+            }
+        }
+
+        .propiedad-footer {
+            @include mix.flex(row, space-between, center, 10px);
+            margin-top: vars.$espaciado-medio;
+
+            .precio {
+                color: vars.$color-primario;
+                font-size: vars.$texto-grande;
+                font-weight: 700;
+            }
+        }
+    }
+}
+
+// ==========================================
+// CARD VALOR
+// ==========================================
+
+.card-valor {
+    padding: vars.$espaciado-grande;
+    text-align: center;
+
+    .valor-icono {
+        @include mix.flex(row, center, center, 0);
+        width: 60px;
+        height: 60px;
+        margin: 0 auto vars.$espaciado-medio;
+        border-radius: vars.$radio-redondo;
+        background-color: rgba(201, 162, 39, 0.12);
+        color: vars.$color-secundario;
+        font-size: 1.5rem;
+    }
+
+    h3 {
+        margin-bottom: vars.$espaciado-pequeno;
+    }
+
+    p {
+        margin-bottom: 0;
+    }
+}
+
+// ==========================================
+// CARD EQUIPO
+// ==========================================
+
+.card-equipo {
+
+    .equipo-imagen {
+
+        img {
+            @include mix.imagen-responsive(350px, 0);
+        }
+    }
+
+    .equipo-info {
+        padding: vars.$espaciado-medio;
+        text-align: center;
+
+        h3 {
+            margin-bottom: 5px;
+        }
+
+        span {
+            color: vars.$color-secundario;
+            font-size: vars.$texto-pequeno;
+            font-weight: 600;
+        }
+    }
+}
+
+// ==========================================
+// RESPONSIVE
+// ==========================================
+
+@include mix.tablet {
+
+    .card-propiedad {
+
+        .propiedad-imagen {
+
+            img {
+                height: 280px;
+            }
+        }
+    }
+
+    .card-equipo {
+
+        .equipo-imagen {
+
+            img {
+                height: 380px;
+            }
+        }
+    }
+}
+
+@include mix.desktop {
+
+    .card-propiedad {
+
+        .propiedad-imagen {
+
+            img {
+                height: 300px;
+            }
+        }
+    }
+}

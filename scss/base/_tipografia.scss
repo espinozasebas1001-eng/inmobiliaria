@@ -1,0 +1,71 @@
+// ==========================================
+// TIPOGRAFÍA
+// ==========================================
+
+@use "../utilities/variables" as vars;
+@use "../utilities/mixins" as mix;
+
+body {
+    font-family: vars.$fuente-principal;
+    font-size: vars.$texto-normal;
+    font-weight: 400;
+}
+
+h1 {
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: vars.$color-primario;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: vars.$color-primario;
+}
+
+h3 {
+    font-size: 1.35rem;
+    font-weight: 600;
+    color: vars.$color-texto;
+}
+
+p {
+    color: vars.$color-texto-claro;
+}
+
+.seccion-etiqueta {
+    display: inline-block;
+    margin-bottom: vars.$espaciado-pequeno;
+    color: vars.$color-secundario;
+    font-size: vars.$texto-pequeno;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.titulo-seccion {
+    margin-bottom: vars.$espaciado-grande;
+
+    h2 {
+        margin-bottom: vars.$espaciado-medio;
+
+        span {
+            color: vars.$color-secundario;
+        }
+    }
+
+    p {
+        max-width: 650px;
+        margin: 0 auto;
+    }
+}
+
+@include mix.media-query(vars.$breakpoint-tablet) {
+    h1 {
+        font-size: 3rem;
+    }
+
+    h2 {
+        font-size: 2.4rem;
+    }
+}

@@ -1,0 +1,971 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="Explorá nuestras propiedades en venta y alquiler. Encontrá casas, departamentos y locales con filtros para elegir la opción ideal.">
+
+    <meta name="keywords"
+        content="propiedades, casas, departamentos, alquiler, venta, inmobiliaria, propiedades en venta, propiedades en alquiler">
+
+    <meta name="author" content="Raíces Inmobiliaria">
+
+    <title>Propiedades en Venta y Alquiler | Raíces Inmobiliaria</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css"
+        rel="stylesheet">
+
+    <!-- CSS compilado desde SCSS -->
+    <link rel="stylesheet" href="../styles/style.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+
+        <!-- NAVBAR -->
+        <nav class="navbar navbar-expand-lg navbar-inmobiliaria">
+            <div class="container">
+
+                <a class="navbar-brand" href="../index.html">
+                    <span class="logo-icon">
+                        <i class="bi bi-house-heart"></i>
+                    </span>
+                    <span>Raíces</span>
+                </a>
+
+                <button class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#menuPrincipal"
+                    aria-controls="menuPrincipal"
+                    aria-expanded="false"
+                    aria-label="Abrir menú de navegación">
+
+                    <span class="navbar-toggler-icon"></span>
+
+                </button>
+
+                <div class="collapse navbar-collapse" id="menuPrincipal">
+
+                    <ul class="navbar-nav ms-auto">
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html">
+                                Inicio
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link active"
+                                aria-current="page"
+                                href="propiedades.html">
+                                Propiedades
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="nosotros.html">
+                                Nosotros
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="contacto.html">
+                                Contacto
+                            </a>
+                        </li>
+
+                    </ul>
+
+                    <a href="contacto.html"
+                        class="btn btn-inmobiliaria ms-lg-4">
+                        Solicitar visita
+                    </a>
+
+                </div>
+
+            </div>
+        </nav>
+
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main>
+
+        <!-- ENCABEZADO DE PÁGINA -->
+        <section class="page-header">
+
+            <div class="container text-center"
+                data-aos="fade-up">
+
+                <span class="seccion-etiqueta">
+                    Encontrá tu próximo hogar
+                </span>
+
+                <h1>
+                    Nuestras <span>propiedades</span>
+                </h1>
+
+                <p>
+                    Explorá nuestra selección de propiedades en venta y
+                    alquiler y encontrá la que mejor se adapte a vos.
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- FILTROS -->
+        <section class="filtros-section">
+
+            <div class="container">
+
+                <div class="filtros-propiedades"
+                    data-aos="fade-up">
+
+                    <div class="filtros-titulo">
+                        <i class="bi bi-sliders"></i>
+
+                        <div>
+                            <h2>
+                                Filtrar propiedades
+                            </h2>
+
+                            <p>
+                                Elegí los criterios que buscás.
+                            </p>
+                        </div>
+                    </div>
+
+                    <form class="form-filtros">
+
+                        <div class="campo-filtro">
+
+                            <label for="operacion">
+                                Operación
+                            </label>
+
+                            <select id="operacion"
+                                name="operacion">
+
+                                <option value="">
+                                    Todas
+                                </option>
+
+                                <option value="venta">
+                                    Venta
+                                </option>
+
+                                <option value="alquiler">
+                                    Alquiler
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                        <div class="campo-filtro">
+
+                            <label for="tipo-propiedad">
+                                Tipo
+                            </label>
+
+                            <select id="tipo-propiedad"
+                                name="tipo-propiedad">
+
+                                <option value="">
+                                    Todos
+                                </option>
+
+                                <option value="casa">
+                                    Casa
+                                </option>
+
+                                <option value="departamento">
+                                    Departamento
+                                </option>
+
+                                <option value="ph">
+                                    PH
+                                </option>
+
+                                <option value="local">
+                                    Local comercial
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                        <div class="campo-filtro">
+
+                            <label for="ubicacion">
+                                Ubicación
+                            </label>
+
+                            <input type="text"
+                                id="ubicacion"
+                                name="ubicacion"
+                                placeholder="Ciudad o barrio">
+
+                        </div>
+
+                        <div class="campo-filtro">
+
+                            <label for="precio">
+                                Precio máximo
+                            </label>
+
+                            <select id="precio"
+                                name="precio">
+
+                                <option value="">
+                                    Sin límite
+                                </option>
+
+                                <option value="50000">
+                                    USD 50.000
+                                </option>
+
+                                <option value="100000">
+                                    USD 100.000
+                                </option>
+
+                                <option value="200000">
+                                    USD 200.000
+                                </option>
+
+                                <option value="300000">
+                                    USD 300.000
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                        <button type="submit"
+                            class="btn btn-buscar">
+
+                            <i class="bi bi-search"></i>
+                            Buscar
+
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- LISTADO DE PROPIEDADES -->
+        <section class="listado-propiedades">
+
+            <div class="container">
+
+                <div class="encabezado-listado"
+                    data-aos="fade-up">
+
+                    <div>
+                        <span class="seccion-etiqueta">
+                            Catálogo
+                        </span>
+
+                        <h2>
+                            Propiedades disponibles
+                        </h2>
+                    </div>
+
+                    <span class="cantidad-propiedades">
+                        6 propiedades encontradas
+                    </span>
+
+                </div>
+
+                <div class="row g-4">
+
+                    <!-- PROPIEDAD 1 -->
+                    <div class="col-md-6 col-lg-4"
+                        data-aos="fade-up">
+
+                        <article class="card-propiedad">
+
+                            <div class="card-imagen">
+
+                                <img src="../assets/images/propiedad-1.jpg"
+                                    alt="Casa moderna con jardín en venta">
+
+                                <span class="badge-propiedad">
+                                    Venta
+                                </span>
+
+                            </div>
+
+                            <div class="card-contenido">
+
+                                <span class="tipo-propiedad">
+                                    Casa
+                                </span>
+
+                                <h3>
+                                    Casa moderna con jardín
+                                </h3>
+
+                                <p class="ubicacion-propiedad">
+                                    <i class="bi bi-geo-alt"></i>
+                                    Barrio residencial
+                                </p>
+
+                                <div class="caracteristicas">
+
+                                    <span>
+                                        <i class="bi bi-door-open"></i>
+                                        4 ambientes
+                                    </span>
+
+                                    <span>
+                                        <i class="bi bi-droplet"></i>
+                                        2 baños
+                                    </span>
+
+                                    <span>
+                                        <i class="bi bi-rulers"></i>
+                                        180 m²
+                                    </span>
+
+                                </div>
+
+                                <div class="card-footer-propiedad">
+
+                                    <strong>
+                                        USD 185.000
+                                    </strong>
+
+                                    <a href="detalle.html">
+                                        Ver propiedad
+                                        <i class="bi bi-arrow-right"></i>
+                                    </a>
+
+                                </div>
+
+                            </div>
+
+                        </article>
+
+                    </div>
+
+                    <!-- PROPIEDAD 2 -->
+                    <div class="col-md-6 col-lg-4"
+                        data-aos="fade-up"
+                        data-aos-delay="100">
+
+                        <article class="card-propiedad">
+
+                            <div class="card-imagen">
+
+                                <img src="../assets/images/propiedad-2.jpg"
+                                    alt="Departamento luminoso con balcón en alquiler">
+
+                                <span class="badge-propiedad alquiler">
+                                    Alquiler
+                                </span>
+
+                            </div>
+
+                            <div class="card-contenido">
+
+                                <span class="tipo-propiedad">
+                                    Departamento
+                                </span>
+
+                                <h3>
+                                    Departamento luminoso
+                                </h3>
+
+                                <p class="ubicacion-propiedad">
+                                    <i class="bi bi-geo-alt"></i>
+                                    Zona centro
+                                </p>
+
+                                <div class="caracteristicas">
+
+                                    <span>
+                                        <i class="bi bi-door-open"></i>
+                                        3 ambientes
+                                    </span>
+
+                                    <span>
+                                        <i class="bi bi-droplet"></i>
+                                        1 baño
+                                    </span>
+
+                                    <span>
+                                        <i class="bi bi-rulers"></i>
+                                        75 m²
+                                    </span>
+
+                                </div>
+
+                                <div class="card-footer-propiedad">
+
+                                    <strong>
+                                        $650.000 / mes
+                                    </strong>
+
+                                    <a href="detalle.html">
+                                        Ver propiedad
+                                        <i class="bi bi-arrow-right"></i>
+                                    </a>
+
+                                </div>
+
+                            </div>
+
+                        </article>
+
+                    </div>
+
+                    <!-- PROPIEDAD 3 -->
+                    <div class="col-md-6 col-lg-4"
+                        data-aos="fade-up"
+                        data-aos-delay="200">
+
+                        <article class="card-propiedad">
+
+                            <div class="card-imagen">
+
+                                <img src="../assets/images/propiedad-3.jpg"
+                                    alt="Casa familiar con pileta en venta">
+
+                                <span class="badge-propiedad">
+                                    Venta
+                                </span>
+
+                            </div>
+
+                            <div class="card-contenido">
+
+                                <span class="tipo-propiedad">
+                                    Casa
+                                </span>
+
+                                <h3>
+                                    Casa familiar con pileta
+                                </h3>
+
+                                <p class="ubicacion-propiedad">
+                                    <i class="bi bi-geo-alt"></i>
+                                    Barrio privado
+                                </p>
+
+                                <div class="caracteristicas">
+
+                                    <span>
+                                        <i class="bi bi-door-open"></i>
+                                        5 ambientes
+                                    </span>
+
+                                    <span>
+                                        <i class="bi bi-droplet"></i>
+                                        3 baños
+                                    </span>
+
+                                    <span>
+                                        <i class="bi bi-rulers"></i>
+                                        240 m²
+                                    </span>
+
+                                </div>
+
+                                <div class="card-footer-propiedad">
+
+                                    <strong>
+                                        USD 290.000
+                                    </strong>
+
+                                    <a href="detalle.html">
+                                        Ver propiedad
+                                        <i class="bi bi-arrow-right"></i>
+                                    </a>
+
+                                </div>
+
+                            </div>
+
+                        </article>
+
+                    </div>
+
+                    <!-- PROPIEDAD 4 -->
+                    <div class="col-md-6 col-lg-4"
+                        data-aos="fade-up">
+
+                        <article class="card-propiedad">
+
+                            <div class="card-imagen">
+
+                                <img src="../assets/images/propiedad-4.jpg"
+                                    alt="Departamento moderno de dos ambientes en venta">
+
+                                <span class="badge-propiedad">
+                                    Venta
+                                </span>
+
+                            </div>
+
+                            <div class="card-contenido">
+
+                                <span class="tipo-propiedad">
+                                    Departamento
+                                </span>
+
+                                <h3>
+                                    Departamento moderno
+                                </h3>
+
+                                <p class="ubicacion-propiedad">
+                                    <i class="bi bi-geo-alt"></i>
+                                    Zona norte
+                                </p>
+
+                                <div class="caracteristicas">
+
+                                    <span>
+                                        <i class="bi bi-door-open"></i>
+                                        2 ambientes
+                                    </span>
+
+                                    <span>
+                                        <i class="bi bi-droplet"></i>
+                                        1 baño
+                                    </span>
+
+                                    <span>
+                                        <i class="bi bi-rulers"></i>
+                                        55 m²
+                                    </span>
+
+                                </div>
+
+                                <div class="card-footer-propiedad">
+
+                                    <strong>
+                                        USD 110.000
+                                    </strong>
+
+                                    <a href="detalle.html">
+                                        Ver propiedad
+                                        <i class="bi bi-arrow-right"></i>
+                                    </a>
+
+                                </div>
+
+                            </div>
+
+                        </article>
+
+                    </div>
+
+                    <!-- PROPIEDAD 5 -->
+                    <div class="col-md-6 col-lg-4"
+                        data-aos="fade-up"
+                        data-aos-delay="100">
+
+                        <article class="card-propiedad">
+
+                            <div class="card-imagen">
+
+                                <img src="../assets/images/propiedad-5.jpg"
+                                    alt="Casa amplia de cuatro dormitorios en alquiler">
+
+                                <span class="badge-propiedad alquiler">
+                                    Alquiler
+                                </span>
+
+                            </div>
+
+                            <div class="card-contenido">
+
+                                <span class="tipo-propiedad">
+                                    Casa
+                                </span>
+
+                                <h3>
+                                    Casa amplia y luminosa
+                                </h3>
+
+                                <p class="ubicacion-propiedad">
+                                    <i class="bi bi-geo-alt"></i>
+                                    Zona residencial
+                                </p>
+
+                                <div class="caracteristicas">
+
+                                    <span>
+                                        <i class="bi bi-door-open"></i>
+                                        4 ambientes
+                                    </span>
+
+                                    <span>
+                                        <i class="bi bi-droplet"></i>
+                                        2 baños
+                                    </span>
+
+                                    <span>
+                                        <i class="bi bi-rulers"></i>
+                                        160 m²
+                                    </span>
+
+                                </div>
+
+                                <div class="card-footer-propiedad">
+
+                                    <strong>
+                                        $850.000 / mes
+                                    </strong>
+
+                                    <a href="detalle.html">
+                                        Ver propiedad
+                                        <i class="bi bi-arrow-right"></i>
+                                    </a>
+
+                                </div>
+
+                            </div>
+
+                        </article>
+
+                    </div>
+
+                    <!-- PROPIEDAD 6 -->
+                    <div class="col-md-6 col-lg-4"
+                        data-aos="fade-up"
+                        data-aos-delay="200">
+
+                        <article class="card-propiedad">
+
+                            <div class="card-imagen">
+
+                                <img src="../assets/images/propiedad-6.jpg"
+                                    alt="Local comercial en excelente ubicación">
+
+                                <span class="badge-propiedad alquiler">
+                                    Alquiler
+                                </span>
+
+                            </div>
+
+                            <div class="card-contenido">
+
+                                <span class="tipo-propiedad">
+                                    Local comercial
+                                </span>
+
+                                <h3>
+                                    Local en excelente ubicación
+                                </h3>
+
+                                <p class="ubicacion-propiedad">
+                                    <i class="bi bi-geo-alt"></i>
+                                    Centro comercial
+                                </p>
+
+                                <div class="caracteristicas">
+
+                                    <span>
+                                        <i class="bi bi-shop"></i>
+                                        Comercial
+                                    </span>
+
+                                    <span>
+                                        <i class="bi bi-door-open"></i>
+                                        2 espacios
+                                    </span>
+
+                                    <span>
+                                        <i class="bi bi-rulers"></i>
+                                        90 m²
+                                    </span>
+
+                                </div>
+
+                                <div class="card-footer-propiedad">
+
+                                    <strong>
+                                        $700.000 / mes
+                                    </strong>
+
+                                    <a href="detalle.html">
+                                        Ver propiedad
+                                        <i class="bi bi-arrow-right"></i>
+                                    </a>
+
+                                </div>
+
+                            </div>
+
+                        </article>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- MAPA -->
+        <section class="mapa-section">
+
+            <div class="container">
+
+                <div class="row align-items-center g-5">
+
+                    <div class="col-lg-5"
+                        data-aos="fade-right">
+
+                        <span class="seccion-etiqueta">
+                            Encontrá tu zona
+                        </span>
+
+                        <h2>
+                            Propiedades cerca de
+                            <span>vos.</span>
+                        </h2>
+
+                        <p>
+                            Explorá las zonas donde tenemos propiedades
+                            disponibles y encontrá la ubicación que mejor
+                            se adapte a tu estilo de vida.
+                        </p>
+
+                        <div class="dato-mapa">
+
+                            <i class="bi bi-geo-alt"></i>
+
+                            <div>
+                                <strong>
+                                    Ubicación
+                                </strong>
+
+                                <span>
+                                    Ciudad, Provincia
+                                </span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-lg-7"
+                        data-aos="fade-left">
+
+                        <div class="mapa-contenedor">
+
+                            <iframe
+                                src="https://www.google.com/maps?q=Buenos+Aires,+Argentina&output=embed"
+                                title="Mapa de ubicación de Raíces Inmobiliaria"
+                                loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- CTA -->
+        <section class="cta-inmobiliaria">
+
+            <div class="container">
+
+                <div class="cta-contenido text-center"
+                    data-aos="zoom-in">
+
+                    <span class="seccion-etiqueta">
+                        ¿Necesitás asesoramiento?
+                    </span>
+
+                    <h2>
+                        Estamos para ayudarte.
+                    </h2>
+
+                    <p>
+                        Contanos qué propiedad estás buscando y te
+                        acompañamos durante todo el proceso.
+                    </p>
+
+                    <a href="contacto.html"
+                        class="btn btn-inmobiliaria">
+                        Contactanos
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer-inmobiliaria">
+
+        <div class="container">
+
+            <div class="row g-4">
+
+                <div class="col-lg-4">
+
+                    <a href="../index.html"
+                        class="footer-logo">
+
+                        <i class="bi bi-house-heart"></i>
+                        Raíces
+
+                    </a>
+
+                    <p>
+                        Encontramos espacios para comenzar nuevas historias.
+                    </p>
+
+                </div>
+
+                <div class="col-md-4 col-lg-2">
+
+                    <h3>
+                        Navegación
+                    </h3>
+
+                    <ul>
+
+                        <li>
+                            <a href="../index.html">
+                                Inicio
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="propiedades.html">
+                                Propiedades
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="nosotros.html">
+                                Nosotros
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="contacto.html">
+                                Contacto
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+                <div class="col-md-4 col-lg-3">
+
+                    <h3>
+                        Contacto
+                    </h3>
+
+                    <ul class="footer-contacto">
+
+                        <li>
+                            <i class="bi bi-geo-alt"></i>
+                            <span>Ciudad, Provincia</span>
+                        </li>
+
+                        <li>
+                            <i class="bi bi-telephone"></i>
+                            <span>+54 11 1234-5678</span>
+                        </li>
+
+                        <li>
+                            <i class="bi bi-envelope"></i>
+                            <span>info@raicesinmobiliaria.com</span>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+                <div class="col-md-4 col-lg-3">
+
+                    <h3>
+                        Seguinos
+                    </h3>
+
+                    <div class="redes-sociales">
+
+                        <a href="#" aria-label="Instagram">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+
+                        <a href="#" aria-label="Facebook">
+                            <i class="bi bi-facebook"></i>
+                        </a>
+
+                        <a href="#" aria-label="WhatsApp">
+                            <i class="bi bi-whatsapp"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+
+                <p>
+                    &copy; 2026 Raíces Inmobiliaria.
+                    Todos los derechos reservados.
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+    </script>
+
+</body>
+
+</html>

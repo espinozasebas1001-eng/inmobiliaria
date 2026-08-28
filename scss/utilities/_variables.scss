@@ -1,0 +1,65 @@
+// ==========================================
+// VARIABLES
+// ==========================================
+
+// COLORES
+$color-primario: #234f3e;
+$color-primario-hover: #183a2d;
+
+$color-secundario: #c9a227;
+$color-secundario-hover: #a8861c;
+
+$color-fondo: #f7f5f0;
+$color-blanco: #ffffff;
+$color-negro: #000000;
+
+$color-texto: #292929;
+$color-texto-claro: #6b6b6b;
+
+$color-borde: #e3e0d8;
+$color-exito: #3f7d5a;
+
+// TIPOGRAFÍA
+$fuente-principal: "Poppins", sans-serif;
+$fuente-titulo: "Poppins", sans-serif;
+
+// TAMAÑOS
+$texto-xs: 0.75rem;
+$texto-pequeno: 0.875rem;
+$texto-normal: 1rem;
+$texto-medio: 1.125rem;
+$texto-grande: 1.5rem;
+$texto-xl: 2rem;
+$texto-xxl: 3rem;
+
+// ESPACIADOS
+$espaciado-xs: 5px;
+$espaciado-pequeno: 10px;
+$espaciado-medio: 20px;
+$espaciado-grande: 40px;
+$espaciado-xl: 60px;
+$espaciado-xxl: 100px;
+
+// BORDES
+$radio-pequeno: 6px;
+$radio-borde: 12px;
+$radio-grande: 20px;
+$radio-redondo: 50%;
+
+// CONTENEDOR
+$ancho-contenedor: 1200px;
+
+// SOMBRAS
+$sombra-suave: 0 5px 20px rgba(0, 0, 0, 0.08);
+$sombra-media: 0 10px 30px rgba(0, 0, 0, 0.12);
+
+// TRANSICIONES
+$transicion-rapida: 0.2s ease;
+$transicion-normal: 0.3s ease;
+$transicion-lenta: 0.5s ease;
+
+// BREAKPOINTS
+$breakpoint-mobile: 576px;
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1024px;
+$breakpoint-xl: 1200px;

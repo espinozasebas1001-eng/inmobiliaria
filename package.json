@@ -1,0 +1,11 @@
+{
+  "name": "raices-inmobiliaria",
+  "version": "1.0.0",
+  "description": "Sitio web ficticio para una inmobiliaria",
+  "scripts": {
+    "sass": "sass scss/main.scss styles/style.css"
+  },
+  "devDependencies": {
+    "sass": "^1.102.0"
+  }
+}

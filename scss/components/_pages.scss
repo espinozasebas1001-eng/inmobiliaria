@@ -228,7 +228,7 @@
 // NOSOTROS
 // ==========================================
 
-.sobre-nosotros {
+.nosotros-historia {
 
     .nosotros-imagen {
         overflow: hidden;
@@ -265,7 +265,7 @@
     background-color: vars.$color-blanco;
 }
 
-.valor-card {
+.card-valor {
     height: 100%;
     padding: vars.$espaciado-grande;
     background-color: vars.$color-fondo;
@@ -304,7 +304,7 @@
 // SERVICIOS
 // ==========================================
 
-.servicios-nosotros {
+.servicios-section {
 
     .servicios-lista {
         display: flex;

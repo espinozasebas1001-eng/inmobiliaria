@@ -9,11 +9,11 @@
         content="Conocé todos los detalles de esta propiedad: características, ambientes, superficie, ubicación y galería de imágenes.">
 
     <meta name="keywords"
-        content="detalle propiedad, casa en venta, propiedad inmobiliaria, características propiedad, visita propiedad">
+        content="detalle propiedad, casa en venta, departamento, local comercial, propiedad inmobiliaria, alquiler, venta">
 
     <meta name="author" content="Raíces Inmobiliaria">
 
-    <title>Casa Moderna con Jardín | Raíces Inmobiliaria</title>
+    <title>Detalle de propiedad | Raíces Inmobiliaria</title>
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
@@ -36,7 +36,6 @@
     <!-- HEADER -->
     <header>
 
-        <!-- NAVBAR -->
         <nav class="navbar navbar-expand-lg navbar-inmobiliaria">
 
             <div class="container">
@@ -149,7 +148,9 @@
 
                         <li class="breadcrumb-item active"
                             aria-current="page">
+
                             Detalle
+
                         </li>
 
                     </ol>
@@ -171,11 +172,12 @@
 
                     <div class="galeria-principal">
 
-                        <img src="../assets/images/propiedad-1.png"
-                            alt="Vista principal de casa moderna con jardín">
+                        <img id="imagenPrincipal"
+                            src=""
+                            alt="">
 
-                        <span class="badge-propiedad">
-                            Venta
+                        <span id="badgePropiedad"
+                            class="badge-propiedad">
                         </span>
 
                     </div>
@@ -184,29 +186,33 @@
 
                         <div class="miniatura activa">
 
-                            <img src="../assets/images/propiedad-1.png"
-                                alt="Vista exterior de la casa">
+                            <img id="miniatura1"
+                                src=""
+                                alt="">
 
                         </div>
 
                         <div class="miniatura">
 
-                            <img src="../assets/images/propiedad-1-interior.png"
-                                alt="Interior luminoso de la casa">
+                            <img id="miniatura2"
+                                src=""
+                                alt="">
 
                         </div>
 
                         <div class="miniatura">
 
-                            <img src="../assets/images/propiedad-1-living.png"
-                                alt="Living de la casa">
+                            <img id="miniatura3"
+                                src=""
+                                alt="">
 
                         </div>
 
                         <div class="miniatura">
 
-                            <img src="../assets/images/propiedad-1-jardin.png"
-                                alt="Jardín de la propiedad">
+                            <img id="miniatura4"
+                                src=""
+                                alt="">
 
                         </div>
 
@@ -222,31 +228,28 @@
 
                         <div class="detalle-info">
 
-                            <span class="tipo-propiedad">
-                                Casa
+                            <span id="tipoPropiedad"
+                                class="tipo-propiedad">
                             </span>
 
-                            <h1>
-                                Casa moderna con jardín
+                            <h1 id="tituloPropiedad">
                             </h1>
 
                             <p class="detalle-ubicacion">
 
                                 <i class="bi bi-geo-alt"></i>
 
-                                Barrio residencial, Ciudad,
-                                Provincia
+                                <span id="ubicacionPropiedad">
+                                </span>
 
                             </p>
 
                             <div class="detalle-precio">
 
-                                <span>
-                                    Precio de venta
+                                <span id="tipoPrecio">
                                 </span>
 
-                                <strong>
-                                    USD 185.000
+                                <strong id="precioPropiedad">
                                 </strong>
 
                             </div>
@@ -260,116 +263,8 @@
                                 Características
                             </h2>
 
-                            <div class="grid-caracteristicas">
-
-                                <div class="caracteristica">
-
-                                    <i class="bi bi-door-open"></i>
-
-                                    <div>
-
-                                        <span>
-                                            Ambientes
-                                        </span>
-
-                                        <strong>
-                                            4
-                                        </strong>
-
-                                    </div>
-
-                                </div>
-
-                                <div class="caracteristica">
-
-                                    <i class="bi bi-house"></i>
-
-                                    <div>
-
-                                        <span>
-                                            Dormitorios
-                                        </span>
-
-                                        <strong>
-                                            3
-                                        </strong>
-
-                                    </div>
-
-                                </div>
-
-                                <div class="caracteristica">
-
-                                    <i class="bi bi-droplet"></i>
-
-                                    <div>
-
-                                        <span>
-                                            Baños
-                                        </span>
-
-                                        <strong>
-                                            2
-                                        </strong>
-
-                                    </div>
-
-                                </div>
-
-                                <div class="caracteristica">
-
-                                    <i class="bi bi-rulers"></i>
-
-                                    <div>
-
-                                        <span>
-                                            Superficie
-                                        </span>
-
-                                        <strong>
-                                            180 m²
-                                        </strong>
-
-                                    </div>
-
-                                </div>
-
-                                <div class="caracteristica">
-
-                                    <i class="bi bi-car-front"></i>
-
-                                    <div>
-
-                                        <span>
-                                            Cochera
-                                        </span>
-
-                                        <strong>
-                                            Sí
-                                        </strong>
-
-                                    </div>
-
-                                </div>
-
-                                <div class="caracteristica">
-
-                                    <i class="bi bi-tree"></i>
-
-                                    <div>
-
-                                        <span>
-                                            Jardín
-                                        </span>
-
-                                        <strong>
-                                            Sí
-                                        </strong>
-
-                                    </div>
-
-                                </div>
-
+                            <div id="caracteristicasPropiedad"
+                                class="grid-caracteristicas">
                             </div>
 
                         </div>
@@ -381,23 +276,8 @@
                                 Descripción
                             </h2>
 
-                            <p>
-                                Moderna casa ubicada en una zona residencial,
-                                pensada para quienes buscan comodidad,
-                                espacios amplios y conexión con el exterior.
-                            </p>
-
-                            <p>
-                                La propiedad cuenta con ambientes luminosos,
-                                una distribución funcional, tres dormitorios,
-                                dos baños, cochera y un amplio jardín.
-                            </p>
-
-                            <p>
-                                Su diseño combina espacios interiores cómodos
-                                con sectores exteriores ideales para disfrutar
-                                en familia o recibir invitados.
-                            </p>
+                            <div id="descripcionPropiedad">
+                            </div>
 
                         </div>
 
@@ -426,7 +306,9 @@
 
                             <a href="contacto.html"
                                 class="btn btn-inmobiliaria w-100">
+
                                 Solicitar una visita
+
                             </a>
 
                             <a href="https://wa.me/541112345678"
@@ -476,8 +358,8 @@
                 <div class="mapa-contenedor"
                     data-aos="fade-up">
 
-                    <iframe
-                        src="https://www.google.com/maps?q=Buenos+Aires,+Argentina&output=embed"
+                    <iframe id="mapaPropiedad"
+                        src=""
                         title="Mapa de ubicación de la propiedad"
                         loading="lazy"
                         referrerpolicy="no-referrer-when-downgrade">
@@ -511,7 +393,9 @@
 
                     <a href="contacto.html"
                         class="btn btn-inmobiliaria">
+
                         Solicitar visita
+
                     </a>
 
                 </div>
@@ -657,10 +541,430 @@
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 
     <script>
+
+        /*
+         * DATOS DE LAS PROPIEDADES
+         * --------------------------------
+         * El número recibido desde la URL
+         * determina qué propiedad mostrar.
+         */
+
+        const propiedades = {
+
+            1: {
+                tipo: "Casa",
+                titulo: "Casa moderna con jardín",
+                operacion: "Venta",
+                precio: "USD 185.000",
+                ubicacion: "Barrio residencial, Ciudad, Provincia",
+
+                imagenes: [
+                    "propiedad-1.png",
+                    "propiedad-1-interior.png",
+                    "propiedad-1-living.png",
+                    "propiedad-1-jardin.png"
+                ],
+
+                imagenesAlt: [
+                    "Vista exterior de casa moderna con jardín",
+                    "Interior luminoso de la casa",
+                    "Living de la casa",
+                    "Jardín de la propiedad"
+                ],
+
+                caracteristicas: [
+                    ["bi-door-open", "Ambientes", "4"],
+                    ["bi-house", "Dormitorios", "3"],
+                    ["bi-droplet", "Baños", "2"],
+                    ["bi-rulers", "Superficie", "180 m²"],
+                    ["bi-car-front", "Cochera", "Sí"],
+                    ["bi-tree", "Jardín", "Sí"]
+                ],
+
+                descripcion: [
+                    "Moderna casa ubicada en una zona residencial, pensada para quienes buscan comodidad, espacios amplios y conexión con el exterior.",
+                    "La propiedad cuenta con ambientes luminosos, una distribución funcional, tres dormitorios, dos baños, cochera y un amplio jardín.",
+                    "Su diseño combina espacios interiores cómodos con sectores exteriores ideales para disfrutar en familia o recibir invitados."
+                ],
+
+                mapa: "https://www.google.com/maps?q=Buenos+Aires,+Argentina&output=embed"
+            },
+
+            2: {
+                tipo: "Departamento",
+                titulo: "Departamento luminoso",
+                operacion: "Alquiler",
+                precio: "$650.000 / mes",
+                ubicacion: "Zona centro, Ciudad, Provincia",
+
+                imagenes: [
+                    "propiedad-2.png",
+                    "propiedad-2-interior.png",
+                    "propiedad-2-living.png",
+                    "propiedad-2-balcon.png"
+                ],
+
+                imagenesAlt: [
+                    "Vista exterior del departamento luminoso",
+                    "Interior luminoso del departamento",
+                    "Living del departamento",
+                    "Balcón del departamento"
+                ],
+
+                caracteristicas: [
+                    ["bi-door-open", "Ambientes", "3"],
+                    ["bi-house", "Dormitorios", "2"],
+                    ["bi-droplet", "Baños", "1"],
+                    ["bi-rulers", "Superficie", "75 m²"],
+                    ["bi-building", "Tipo", "Departamento"],
+                    ["bi-box-arrow-up-right", "Balcón", "Sí"]
+                ],
+
+                descripcion: [
+                    "Departamento luminoso ubicado en una zona céntrica, ideal para quienes buscan comodidad y cercanía a los principales servicios.",
+                    "La propiedad cuenta con tres ambientes, dos dormitorios, un baño y una superficie de 75 m².",
+                    "Dispone además de un balcón que aporta luminosidad y un espacio exterior para disfrutar."
+                ],
+
+                mapa: "https://www.google.com/maps?q=Buenos+Aires,+Argentina&output=embed"
+            },
+
+            3: {
+                tipo: "Casa",
+                titulo: "Casa familiar con pileta",
+                operacion: "Venta",
+                precio: "USD 290.000",
+                ubicacion: "Barrio privado, Ciudad, Provincia",
+
+                imagenes: [
+                    "propiedad-3.png",
+                    "propiedad-3-interior.png",
+                    "propiedad-3-living.png",
+                    "propiedad-3-pileta.png"
+                ],
+
+                imagenesAlt: [
+                    "Vista exterior de casa familiar con pileta",
+                    "Interior de la casa familiar",
+                    "Living de la casa familiar",
+                    "Pileta de la propiedad"
+                ],
+
+                caracteristicas: [
+                    ["bi-door-open", "Ambientes", "5"],
+                    ["bi-house", "Dormitorios", "4"],
+                    ["bi-droplet", "Baños", "3"],
+                    ["bi-rulers", "Superficie", "240 m²"],
+                    ["bi-car-front", "Cochera", "Sí"],
+                    ["bi-water", "Pileta", "Sí"]
+                ],
+
+                descripcion: [
+                    "Casa familiar ubicada en un barrio privado, pensada para disfrutar de espacios amplios y cómodos en un entorno tranquilo.",
+                    "La propiedad cuenta con cinco ambientes, cuatro dormitorios, tres baños y una superficie de 240 m².",
+                    "El exterior se destaca por su pileta y sus espacios pensados para disfrutar en familia y recibir invitados."
+                ],
+
+                mapa: "https://www.google.com/maps?q=Buenos+Aires,+Argentina&output=embed"
+            },
+
+            4: {
+                tipo: "Departamento",
+                titulo: "Departamento moderno",
+                operacion: "Venta",
+                precio: "USD 110.000",
+                ubicacion: "Zona norte, Ciudad, Provincia",
+
+                imagenes: [
+                    "propiedad-4.png",
+                    "propiedad-4-interior.png",
+                    "propiedad-4-living.png",
+                    "propiedad-4-terraza.png"
+                ],
+
+                imagenesAlt: [
+                    "Vista exterior del departamento moderno",
+                    "Interior del departamento moderno",
+                    "Living del departamento moderno",
+                    "Terraza del departamento"
+                ],
+
+                caracteristicas: [
+                    ["bi-door-open", "Ambientes", "2"],
+                    ["bi-house", "Dormitorios", "1"],
+                    ["bi-droplet", "Baños", "1"],
+                    ["bi-rulers", "Superficie", "55 m²"],
+                    ["bi-building", "Tipo", "Departamento"],
+                    ["bi-sun", "Terraza", "Sí"]
+                ],
+
+                descripcion: [
+                    "Departamento moderno ubicado en la zona norte, ideal para quienes buscan una propiedad práctica y funcional.",
+                    "Cuenta con dos ambientes, un dormitorio, un baño y una superficie de 55 m².",
+                    "La propiedad incorpora un espacio exterior que permite disfrutar de mayor amplitud y luminosidad."
+                ],
+
+                mapa: "https://www.google.com/maps?q=Buenos+Aires,+Argentina&output=embed"
+            },
+
+            5: {
+                tipo: "Casa",
+                titulo: "Casa amplia y luminosa",
+                operacion: "Alquiler",
+                precio: "$850.000 / mes",
+                ubicacion: "Zona residencial, Ciudad, Provincia",
+
+                imagenes: [
+                    "propiedad-5.png",
+                    "propiedad-5-interior.png",
+                    "propiedad-5-living.png",
+                    "propiedad-5-jardin.png"
+                ],
+
+                imagenesAlt: [
+                    "Vista exterior de casa amplia y luminosa",
+                    "Interior de la casa",
+                    "Living de la casa",
+                    "Jardín de la propiedad"
+                ],
+
+                caracteristicas: [
+                    ["bi-door-open", "Ambientes", "4"],
+                    ["bi-house", "Dormitorios", "3"],
+                    ["bi-droplet", "Baños", "2"],
+                    ["bi-rulers", "Superficie", "160 m²"],
+                    ["bi-car-front", "Cochera", "Sí"],
+                    ["bi-tree", "Jardín", "Sí"]
+                ],
+
+                descripcion: [
+                    "Casa amplia y luminosa ubicada en una zona residencial, ideal para familias que buscan comodidad y buenos espacios.",
+                    "La propiedad cuenta con cuatro ambientes, tres dormitorios, dos baños y una superficie de 160 m².",
+                    "También dispone de cochera y jardín, ofreciendo espacios exteriores para disfrutar durante todo el año."
+                ],
+
+                mapa: "https://www.google.com/maps?q=Buenos+Aires,+Argentina&output=embed"
+            },
+
+            6: {
+                tipo: "Local comercial",
+                titulo: "Local en excelente ubicación",
+                operacion: "Alquiler",
+                precio: "$700.000 / mes",
+                ubicacion: "Centro comercial, Ciudad, Provincia",
+
+                imagenes: [
+                    "propiedad-6.png",
+                    "propiedad-6-interior.png",
+                    "propiedad-6-espacio-2.png",
+                    "propiedad-6-bano.png"
+                ],
+
+                imagenesAlt: [
+                    "Vista exterior del local comercial",
+                    "Interior principal del local",
+                    "Segundo espacio del local comercial",
+                    "Baño del local comercial"
+                ],
+
+                caracteristicas: [
+                    ["bi-shop", "Tipo", "Comercial"],
+                    ["bi-door-open", "Espacios", "2"],
+                    ["bi-rulers", "Superficie", "90 m²"],
+                    ["bi-droplet", "Baños", "1"],
+                    ["bi-geo-alt", "Ubicación", "Centro comercial"],
+                    ["bi-building", "Uso", "Comercial"]
+                ],
+
+                descripcion: [
+                    "Local comercial ubicado en una zona de gran actividad, ideal para desarrollar diferentes tipos de emprendimientos.",
+                    "Cuenta con dos espacios funcionales y una superficie total de 90 m².",
+                    "La propiedad también dispone de baño propio y una ubicación estratégica dentro de un centro comercial."
+                ],
+
+                mapa: "https://www.google.com/maps?q=Buenos+Aires,+Argentina&output=embed"
+            }
+
+        };
+
+
+        /*
+         * OBTENER ID DESDE LA URL
+         */
+
+        const parametros = new URLSearchParams(window.location.search);
+
+        const id = parametros.get("id") || "1";
+
+        const propiedad = propiedades[id] || propiedades[1];
+
+
+        /*
+         * ACTUALIZAR TÍTULO
+         */
+
+        document.title =
+            `${propiedad.titulo} | Raíces Inmobiliaria`;
+
+
+        /*
+         * INFORMACIÓN PRINCIPAL
+         */
+
+        document.getElementById("tipoPropiedad").textContent =
+            propiedad.tipo;
+
+        document.getElementById("tituloPropiedad").textContent =
+            propiedad.titulo;
+
+        document.getElementById("ubicacionPropiedad").textContent =
+            propiedad.ubicacion;
+
+        document.getElementById("tipoPrecio").textContent =
+            propiedad.operacion === "Venta"
+                ? "Precio de venta"
+                : "Precio de alquiler";
+
+        document.getElementById("precioPropiedad").textContent =
+            propiedad.precio;
+
+        document.getElementById("badgePropiedad").textContent =
+            propiedad.operacion;
+
+
+        /*
+         * GALERÍA
+         */
+
+        const rutaImagenes = "../assets/images/";
+
+        const imagenPrincipal =
+            document.getElementById("imagenPrincipal");
+
+        const miniaturas = [
+            document.getElementById("miniatura1"),
+            document.getElementById("miniatura2"),
+            document.getElementById("miniatura3"),
+            document.getElementById("miniatura4")
+        ];
+
+        imagenPrincipal.src =
+            rutaImagenes + propiedad.imagenes[0];
+
+        imagenPrincipal.alt =
+            propiedad.imagenesAlt[0];
+
+        miniaturas.forEach((miniatura, indice) => {
+
+            miniatura.src =
+                rutaImagenes + propiedad.imagenes[indice];
+
+            miniatura.alt =
+                propiedad.imagenesAlt[indice];
+
+        });
+
+
+        /*
+         * GALERÍA INTERACTIVA
+         */
+
+        const contenedoresMiniatura =
+            document.querySelectorAll(".miniatura");
+
+        contenedoresMiniatura.forEach((contenedor, indice) => {
+
+            contenedor.addEventListener("click", () => {
+
+                imagenPrincipal.src =
+                    rutaImagenes + propiedad.imagenes[indice];
+
+                imagenPrincipal.alt =
+                    propiedad.imagenesAlt[indice];
+
+                contenedoresMiniatura.forEach((item) => {
+                    item.classList.remove("activa");
+                });
+
+                contenedor.classList.add("activa");
+
+            });
+
+        });
+
+
+        /*
+         * CARACTERÍSTICAS
+         */
+
+        const contenedorCaracteristicas =
+            document.getElementById("caracteristicasPropiedad");
+
+        propiedad.caracteristicas.forEach((caracteristica) => {
+
+            const div =
+                document.createElement("div");
+
+            div.className = "caracteristica";
+
+            div.innerHTML = `
+                <i class="bi ${caracteristica[0]}"></i>
+
+                <div>
+
+                    <span>
+                        ${caracteristica[1]}
+                    </span>
+
+                    <strong>
+                        ${caracteristica[2]}
+                    </strong>
+
+                </div>
+            `;
+
+            contenedorCaracteristicas.appendChild(div);
+
+        });
+
+
+        /*
+         * DESCRIPCIÓN
+         */
+
+        const contenedorDescripcion =
+            document.getElementById("descripcionPropiedad");
+
+        propiedad.descripcion.forEach((texto) => {
+
+            const parrafo =
+                document.createElement("p");
+
+            parrafo.textContent =
+                texto;
+
+            contenedorDescripcion.appendChild(parrafo);
+
+        });
+
+
+        /*
+         * MAPA
+         */
+
+        document.getElementById("mapaPropiedad").src =
+            propiedad.mapa;
+
+
+        /*
+         * ANIMACIONES AOS
+         */
+
         AOS.init({
             duration: 800,
             once: true
         });
+
     </script>
 
 </body>

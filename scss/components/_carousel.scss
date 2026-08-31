@@ -5,6 +5,11 @@
 @use "../utilities/variables" as vars;
 @use "../utilities/mixins" as mix;
 
+
+// ==========================================
+// CARRUSEL PRINCIPAL
+// ==========================================
+
 .carousel-inmobiliaria {
     overflow: hidden;
     border-radius: vars.$radio-borde;
@@ -73,6 +78,7 @@
     }
 }
 
+
 // ==========================================
 // GALERÍA DE PROPIEDAD
 // ==========================================
@@ -83,9 +89,18 @@
 
     .galeria-principal {
         position: relative;
+        height: 400px;
+        background-color: vars.$color-fondo;
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
         img {
-            @include mix.imagen-responsive(400px, 0);
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            display: block;
+            border-radius: 0;
         }
 
         .badge-propiedad {
@@ -118,6 +133,7 @@
                 width: 100%;
                 height: 90px;
                 object-fit: cover;
+                display: block;
             }
 
             &:hover,
@@ -128,6 +144,7 @@
         }
     }
 }
+
 
 // ==========================================
 // RESPONSIVE
@@ -148,9 +165,10 @@
     .galeria-propiedad {
 
         .galeria-principal {
+            height: 500px;
 
             img {
-                height: 500px;
+                height: 100%;
             }
         }
 
@@ -165,6 +183,7 @@
         }
     }
 }
+
 
 @include mix.desktop {
 
@@ -181,9 +200,10 @@
     .galeria-propiedad {
 
         .galeria-principal {
+            height: 600px;
 
             img {
-                height: 600px;
+                height: 100%;
             }
         }
 

@@ -664,11 +664,17 @@ header {
 }
 .galeria-propiedad .galeria-principal {
   position: relative;
+  height: 400px;
+  background-color: #f7f5f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .galeria-propiedad .galeria-principal img {
   width: 100%;
-  height: 400px;
-  object-fit: cover;
+  height: 100%;
+  object-fit: contain;
+  display: block;
   border-radius: 0;
 }
 .galeria-propiedad .galeria-principal .badge-propiedad {
@@ -699,6 +705,7 @@ header {
   width: 100%;
   height: 90px;
   object-fit: cover;
+  display: block;
 }
 .galeria-propiedad .galeria-miniaturas .miniatura:hover, .galeria-propiedad .galeria-miniaturas .miniatura.activa {
   border-color: #c9a227;
@@ -709,8 +716,11 @@ header {
   .carousel-inmobiliaria .carousel-item img {
     height: 550px;
   }
-  .galeria-propiedad .galeria-principal img {
+  .galeria-propiedad .galeria-principal {
     height: 500px;
+  }
+  .galeria-propiedad .galeria-principal img {
+    height: 100%;
   }
   .galeria-propiedad .galeria-miniaturas .miniatura img {
     height: 110px;
@@ -720,8 +730,11 @@ header {
   .carousel-inmobiliaria .carousel-item img {
     height: 600px;
   }
-  .galeria-propiedad .galeria-principal img {
+  .galeria-propiedad .galeria-principal {
     height: 600px;
+  }
+  .galeria-propiedad .galeria-principal img {
+    height: 100%;
   }
   .galeria-propiedad .galeria-miniaturas .miniatura img {
     height: 130px;

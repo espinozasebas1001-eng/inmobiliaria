@@ -58,3 +58,12 @@ inmobiliaria/
 │   └── images/
 │
 └── README.md
+
+Sitio publicado
+
+https://inmobiliaria-iota-ten.vercel.app/
+
+repositorio
+
+GitHub:
+https://github.com/espinozasebas1001-eng/inmobiliaria
